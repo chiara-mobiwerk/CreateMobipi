@@ -15,7 +15,7 @@ Software um Verkehrs-Videos auf einem Raspberry Pi Zero aufzunehmen.
 ## Installation
 ### SD Karte vorbereiten 
 Zuerst muss das richtige Betriebssystem auf die SD Karte geflashed werden. Dafür den [Raspberry Pi Imager](https://www.raspberrypi.com/software/) herunterladen und installieren, die SD Karte einlegen und den Imager starten.
-![Raspberry Pi Imager](media/imager.png)
+![Raspberry Pi Imager](raspi-imager.png)
 Raspberry Pi Modell (Raspberry Pi Zero), Betriebssystem (Raspberry PI OS (Legacy, 32-Bit) Lite), und SD Karte auswählen. 
 Um die erweiterten Einstellungen zu öffnen <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> drücken.
 Hier muss der Hostname eingerichtet werden, die Wi-Fi	Anmeldedaten (vom Netzwerk im Büro) sowie Zeitzone und Tastaturlayout gewählt werden. Als Benutzernamen "pi" beibehalten und Passwort vergeben.
@@ -39,8 +39,9 @@ ssh pi@kopierte-ip-adresse
 ```
 (kopierte Sachen fügt man mit Rechtsklick ein)  
 
-Wenn alles korrekt eingerichtet ist, wird man aufgefordert, den Host-Schlüssel zur Liste der bekannten Hosts hinzuzufügen (Antwort: Ja) und sollte dann mit dem Raspberry Pi verbunden sein.
-![ssh terminal](media/ssh.png)  
+Wenn alles korrekt eingerichtet ist, wird man aufgefordert, den Host-Schlüssel zur Liste der bekannten Hosts hinzuzufügen (Antwort: Ja) und sollte dann mit dem Raspberry Pi verbunden sein.  
+Falls man darauf hingewiesen wird, dass es den Host schon gibt, dann kann man ihn in der Datei known_hosts.txt löschen.  
+Benutzer/.ssh/known_hosts.txt  
 #### Update
 Raspberry Pi durch apt und reboot updaten.  
 ```
